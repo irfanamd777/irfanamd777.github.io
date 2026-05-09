@@ -7,7 +7,7 @@
     <style>
         :root {
             --dark-bg: #000000;
-            --logo-blue: #aed9f4; /* Sky blue sampled from your logo */
+            --logo-blue: #aed9f4;
             --pure-white: #ffffff;
             --nav-gray: #111111;
         }
@@ -22,13 +22,14 @@
         body {
             background-color: var(--dark-bg);
             color: var(--pure-white);
-            line-height: 1.7;
+            line-height: 1.6;
+            overflow-x: hidden;
         }
 
-        /* Navigation Bar */
+        /* Responsive Navigation */
         nav {
             background-color: var(--nav-gray);
-            padding: 0.8rem 6%;
+            padding: 0 6%;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -36,18 +37,24 @@
             top: 0;
             z-index: 1000;
             border-bottom: 1px solid #222;
+            height: 80px; /* Comfortable height for laptop */
         }
 
         .brand {
             display: flex;
             align-items: center;
-            gap: 12px;
             text-decoration: none;
+            height: 100%;
         }
 
         .brand img {
-            height: 50px; 
+            /* Optimized for 526x474 ratio */
+            height: 120px; 
             width: auto;
+            object-fit: contain;
+            /* Negative margin centers the 'text' part of your square logo in the nav */
+            margin-top: 5px; 
+            transition: transform 0.3s ease;
         }
 
         .nav-links {
@@ -62,39 +69,63 @@
             text-decoration: none;
             font-size: 0.95rem;
             font-weight: 500;
-            transition: color 0.3s ease;
+            transition: color 0.3s border 0.3s;
         }
 
         .nav-links a:hover {
             color: var(--logo-blue);
         }
 
-        /* Sky Blue Buttons */
         .cta-btn {
             background-color: var(--logo-blue);
             color: var(--dark-bg) !important;
-            padding: 10px 22px;
+            padding: 10px 20px;
             border-radius: 6px;
             font-weight: 700 !important;
             text-transform: uppercase;
-            letter-spacing: 0.5px;
+            font-size: 0.85rem;
         }
 
-        .cta-btn:hover {
-            background-color: #ffffff;
-            transform: translateY(-2px);
+        /* Mobile Styles */
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                height: auto;
+                padding: 15px 20px;
+                gap: 10px;
+            }
+
+            .brand img {
+                height: 90px; /* Smaller for mobile */
+                margin-top: 0;
+            }
+
+            .nav-links {
+                gap: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+                padding-bottom: 10px;
+            }
+
+            .nav-links a {
+                font-size: 0.85rem;
+            }
+            
+            h1 {
+                font-size: 2.2rem !important;
+            }
         }
 
-        /* Content Layout */
+        /* Layout */
         .main-content {
             max-width: 850px;
-            margin: 60px auto;
+            margin: 40px auto;
             padding: 0 25px;
         }
 
         header {
             text-align: center;
-            margin-bottom: 80px;
+            margin-bottom: 60px;
         }
 
         h1 {
@@ -105,29 +136,16 @@
         }
 
         .blog-post {
-            margin-bottom: 100px;
+            margin-bottom: 80px;
             border-bottom: 1px solid #111;
             padding-bottom: 40px;
         }
 
-        .blog-post h2 {
-            color: var(--logo-blue);
-            font-size: 2rem;
-            margin-bottom: 20px;
-        }
-
-        .blog-post p {
-            font-size: 1.15rem;
-            color: #dddddd;
-            margin-bottom: 20px;
-        }
-
         footer {
             text-align: center;
-            padding: 60px 0;
-            border-top: 1px solid #111;
-            color: #666;
-            font-size: 0.9rem;
+            padding: 40px 0;
+            color: #555;
+            font-size: 0.85rem;
         }
     </style>
 </head>
@@ -135,7 +153,6 @@
 
     <nav>
         <a href="/" class="brand">
-            <!-- Verbatim filename with updated .PNG extension -->
             <img src="NU Logo Final.PNG" alt="NextUp Logo">
         </a>
         <ul class="nav-links">
@@ -157,7 +174,6 @@
             <article class="blog-post">
                 <h2>The Journey Begins</h2>
                 <p>Welcome to our new home on the web. This space is designed to be clean, fast, and focused on the content that matters to you.</p>
-                <p>Explore our insights and stay connected with NextUp Pakistan as we continue to grow.</p>
             </article>
         </section>
     </div>
