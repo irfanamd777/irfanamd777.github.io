@@ -1,72 +1,170 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NextUp Pakistan | Insights</title>
+    <style>
+        :root {
+            --dark-bg: #000000;
+            --logo-blue: #aed9f4; /* Sky blue sampled from your logo */
+            --pure-white: #ffffff;
+            --nav-gray: #111111;
+        }
 
-  <title>NextUp.pk</title>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+        }
 
-  <style>
-    *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
-      font-family:Arial,sans-serif;
-    }
+        body {
+            background-color: var(--dark-bg);
+            color: var(--pure-white);
+            line-height: 1.7;
+        }
 
-    body{
-      background:#0f172a;
-      color:white;
-      display:flex;
-      justify-content:center;
-      align-items:center;
-      height:100vh;
-      text-align:center;
-      padding:20px;
-    }
+        /* Navigation Bar */
+        nav {
+            background-color: var(--nav-gray);
+            padding: 0.8rem 6%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid #222;
+        }
 
-    .container{
-      max-width:700px;
-    }
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+        }
 
-    h1{
-      font-size:4rem;
-      margin-bottom:20px;
-      color:#38bdf8;
-    }
+        .brand img {
+            height: 50px; 
+            width: auto;
+        }
 
-    p{
-      font-size:1.2rem;
-      line-height:1.8;
-      opacity:0.9;
-    }
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+            align-items: center;
+        }
 
-    .badge{
-      margin-top:30px;
-      display:inline-block;
-      padding:12px 22px;
-      background:#38bdf8;
-      color:#0f172a;
-      border-radius:50px;
-      font-weight:bold;
-    }
-  </style>
+        .nav-links a {
+            color: var(--pure-white);
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--logo-blue);
+        }
+
+        /* Sky Blue Buttons */
+        .cta-btn {
+            background-color: var(--logo-blue);
+            color: var(--dark-bg) !important;
+            padding: 10px 22px;
+            border-radius: 6px;
+            font-weight: 700 !important;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .cta-btn:hover {
+            background-color: #ffffff;
+            transform: translateY(-2px);
+        }
+
+        /* Content Layout */
+        .main-content {
+            max-width: 850px;
+            margin: 60px auto;
+            padding: 0 25px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 80px;
+        }
+
+        h1 {
+            color: var(--logo-blue);
+            font-size: 3rem;
+            margin-bottom: 20px;
+            letter-spacing: -1px;
+        }
+
+        .blog-post {
+            margin-bottom: 100px;
+            border-bottom: 1px solid #111;
+            padding-bottom: 40px;
+        }
+
+        .blog-post h2 {
+            color: var(--logo-blue);
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .blog-post p {
+            font-size: 1.15rem;
+            color: #dddddd;
+            margin-bottom: 20px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 60px 0;
+            border-top: 1px solid #111;
+            color: #666;
+            font-size: 0.9rem;
+        }
+    </style>
 </head>
-
 <body>
 
-  <div class="container">
-    <h1>NextUp.pk</h1>
+    <nav>
+        <a href="/" class="brand">
+            <!-- Verbatim filename with updated .PNG extension -->
+            <img src="NU Logo Final.PNG" alt="NextUp Logo">
+        </a>
+        <ul class="nav-links">
+            <li><a href="/">Home</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="https://linkedin.com/company/nextuppakistan" target="_blank">LinkedIn</a></li>
+            <li><a href="#newsletter" class="cta-btn">Newsletter</a></li>
+        </ul>
+    </nav>
 
-    <p>
-      Website deployment successful.
-      GitHub Pages + Cloudflare are connected correctly.
-    </p>
+    <div class="main-content">
+        <header>
+            <h1>NextUp Insights</h1>
+            <p>Elevating the standard of professional excellence in Pakistan.</p>
+        </header>
 
-    <div class="badge">
-      LIVE & WORKING
+        <section id="blog">
+            <article class="blog-post">
+                <h2>The Journey Begins</h2>
+                <p>Welcome to our new home on the web. This space is designed to be clean, fast, and focused on the content that matters to you.</p>
+                <p>Explore our insights and stay connected with NextUp Pakistan as we continue to grow.</p>
+            </article>
+        </section>
     </div>
-  </div>
+
+    <footer>
+        <p>&copy; 2026 NextUp Pakistan. Empowering Progress.</p>
+    </footer>
 
 </body>
 </html>
