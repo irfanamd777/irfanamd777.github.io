@@ -37,7 +37,7 @@
             top: 0;
             z-index: 1000;
             border-bottom: 1px solid #222;
-            height: 80px; /* Comfortable height for laptop */
+            height: 80px;
         }
 
         .brand {
@@ -48,11 +48,11 @@
         }
 
         .brand img {
-            /* Optimized for 526x474 ratio */
-            height: 120px; 
+            /* Optimized for 526x474 ratio to make text visible */
+            height: 125px; 
             width: auto;
             object-fit: contain;
-            /* Negative margin centers the 'text' part of your square logo in the nav */
+            /* Centers the logo's visual weight within the 80px nav */
             margin-top: 5px; 
             transition: transform 0.3s ease;
         }
@@ -69,7 +69,7 @@
             text-decoration: none;
             font-size: 0.95rem;
             font-weight: 500;
-            transition: color 0.3s border 0.3s;
+            transition: color 0.3s;
         }
 
         .nav-links a:hover {
@@ -86,7 +86,7 @@
             font-size: 0.85rem;
         }
 
-        /* Mobile Styles */
+        /* Mobile Friendliness */
         @media (max-width: 768px) {
             nav {
                 flex-direction: column;
@@ -96,7 +96,7 @@
             }
 
             .brand img {
-                height: 90px; /* Smaller for mobile */
+                height: 90px;
                 margin-top: 0;
             }
 
@@ -106,17 +106,9 @@
                 justify-content: center;
                 padding-bottom: 10px;
             }
-
-            .nav-links a {
-                font-size: 0.85rem;
-            }
-            
-            h1 {
-                font-size: 2.2rem !important;
-            }
         }
 
-        /* Layout */
+        /* Content Layout */
         .main-content {
             max-width: 850px;
             margin: 40px auto;
@@ -132,13 +124,6 @@
             color: var(--logo-blue);
             font-size: 3rem;
             margin-bottom: 20px;
-            letter-spacing: -1px;
-        }
-
-        .blog-post {
-            margin-bottom: 80px;
-            border-bottom: 1px solid #111;
-            padding-bottom: 40px;
         }
 
         footer {
@@ -153,7 +138,8 @@
 
     <nav>
         <a href="/" class="brand">
-            <img src="NU Logo Final.PNG" alt="NextUp Logo">
+            <!-- Updated to lowercase .png to match your GitHub file exactly -->
+            <img src="NU Logo Final.png" alt="NextUp Logo">
         </a>
         <ul class="nav-links">
             <li><a href="/">Home</a></li>
