@@ -29,7 +29,8 @@
         /* Responsive Navigation */
         nav {
             background-color: var(--nav-gray);
-            padding: 0 6%;
+            /* Reduced from 6% to 2% to move logo more toward the left corner */
+            padding: 0 2% 0 3%; 
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -37,7 +38,8 @@
             top: 0;
             z-index: 1000;
             border-bottom: 1px solid #222;
-            height: 80px;
+            /* Increased height to accommodate the rocket ship */
+            height: 100px; 
         }
 
         .brand {
@@ -48,12 +50,13 @@
         }
 
         .brand img {
-            /* Optimized for 526x474 ratio to make text visible */
-            height: 125px; 
+            /* Scaled up significantly */
+            height: 160px; 
             width: auto;
             object-fit: contain;
-            /* Centers the logo's visual weight within the 80px nav */
-            margin-top: 5px; 
+            /* Negative margin-top pulls the text up, 
+               but translateY(10px) ensures the rocket tip isn't cut off by the top of the screen */
+            transform: translateY(12px);
             transition: transform 0.3s ease;
         }
 
@@ -62,6 +65,7 @@
             list-style: none;
             gap: 25px;
             align-items: center;
+            padding-right: 2%;
         }
 
         .nav-links a {
@@ -86,17 +90,18 @@
             font-size: 0.85rem;
         }
 
-        /* Mobile Friendliness */
+        /* Mobile Adjustments */
         @media (max-width: 768px) {
             nav {
                 flex-direction: column;
                 height: auto;
                 padding: 15px 20px;
-                gap: 10px;
+                gap: 5px;
             }
 
             .brand img {
-                height: 90px;
+                height: 100px;
+                transform: translateY(0); /* Reset shift for mobile centering */
                 margin-top: 0;
             }
 
@@ -105,6 +110,7 @@
                 flex-wrap: wrap;
                 justify-content: center;
                 padding-bottom: 10px;
+                padding-right: 0;
             }
         }
 
@@ -138,7 +144,6 @@
 
     <nav>
         <a href="/" class="brand">
-            <!-- Updated to lowercase .png to match your GitHub file exactly -->
             <img src="NU Logo Final.png" alt="NextUp Logo">
         </a>
         <ul class="nav-links">
