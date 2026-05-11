@@ -141,4 +141,122 @@
             padding: 60px 40px;
             background: #0A0A0A;
             border-radius: 16px;
-            border: 1px solid
+            border: 1px solid #222;
+            text-align: center;
+        }
+
+        .newsletter-container h2 {
+            font-size: 2.2rem;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .newsletter-container p {
+            color: var(--supporting-text);
+            max-width: 550px;
+            margin: 0 auto 30px;
+        }
+
+        .newsletter-form {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            flex-wrap: wrap;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .newsletter-input {
+            flex: 1;
+            min-width: 280px;
+            padding: 14px 20px;
+            border-radius: 8px;
+            border: 1px solid #333;
+            background: #111;
+            color: white;
+            font-size: 1rem;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+
+        .newsletter-input:focus {
+            border-color: var(--logo-blue);
+        }
+
+        .newsletter-submit {
+            border: none;
+            cursor: pointer;
+            padding: 14px 28px;
+            border-radius: 8px;
+        }
+
+        .newsletter-footer {
+            margin-top: 20px;
+            font-size: 0.75rem;
+            color: #555;
+        }
+
+        footer {
+            text-align: center;
+            padding: 60px 0;
+            color: #444;
+            font-size: 0.85rem;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="/" class="brand">
+            <img src="NU Logo Final.png" alt="NextUp Logo">
+        </a>
+        <ul class="nav-links">
+            <li><a href="/">Home</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="https://linkedin.com/company/nextuppakistan" target="_blank">LinkedIn</a></li>
+            <li><a href="#newsletter" class="cta-btn">Newsletter</a></li>
+        </ul>
+    </nav>
+
+    <div class="main-content">
+        <header>
+            <h1>NextUp Insights</h1>
+            <p>Elevating the standard of professional excellence in Pakistan.</p>
+        </header>
+
+        <section id="blog">
+            <article class="blog-post">
+                <h2>The Journey Begins</h2>
+                <p>Welcome to our new home on the web. This space is designed to be clean, fast, and focused on the content that matters to you.</p>
+            </article>
+        </section>
+
+        <section id="newsletter" class="newsletter-container">
+            <h2>Ready for <span style="color: var(--logo-blue);">what's next?</span></h2>
+            <p>Join our community of students and professionals. Get modern career guides, AI productivity systems, and remote job roadmaps delivered weekly.</p>
+            
+            <form action="https://formspree.io/f/hey@nextup.pk" method="POST" class="newsletter-form">
+                <input 
+                    type="email" 
+                    name="email" 
+                    class="newsletter-input" 
+                    placeholder="Enter your email address" 
+                    required
+                >
+                <button type="submit" class="cta-btn newsletter-submit">
+                    See What's Next
+                </button>
+            </form>
+            <div class="newsletter-footer">
+                Professional insights only. Unsubscribe at any time.
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 NextUp Pakistan. Empowering Progress. [cite: 11]</p>
+    </footer>
+
+</body>
+</html>
