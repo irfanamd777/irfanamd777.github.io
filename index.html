@@ -236,10 +236,16 @@
             <h2>Ready for <span style="color: var(--logo-blue);">what's next?</span></h2>
             <p>Join our community of students and professionals. Get modern career guides, AI productivity systems, and remote job roadmaps delivered weekly.</p>
             
-            <form action="https://formspree.io/f/hey@nextup.pk" method="POST" class="newsletter-form">
+            <form 
+              action="https://docs.google.com/forms/d/e/1FAIpQLSeoo84GuGT3azibqcA2ZVXVX5jqwUVz3xQKubC2tle3SMeiEA/formResponse" 
+              method="POST" 
+              target="hidden_iframe"
+              onsubmit="submitted=true;"
+              class="newsletter-form"
+            >
                 <input 
                     type="email" 
-                    name="email" 
+                    name="entry.2136641221" 
                     class="newsletter-input" 
                     placeholder="Enter your email address" 
                     required
@@ -248,6 +254,20 @@
                     See What's Next
                 </button>
             </form>
+
+            <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {formSubmitted()}"></iframe>
+
+            <div id="form-msg" style="margin-top:15px; color:#7EDCFF; font-size:0.9rem;"></div>
+
+            <script>
+            var submitted = false;
+            function formSubmitted() {
+                document.getElementById('form-msg').textContent = 'Thanks! You\'re on the list.';
+                document.querySelector('.newsletter-form').reset();
+                submitted = false;
+            }
+            </script>
+            
             <div class="newsletter-footer">
                 Professional insights only. Unsubscribe at any time.
             </div>
