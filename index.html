@@ -7,9 +7,10 @@
     <style>
         :root {
             --dark-bg: #000000;
-            --logo-blue: #aed9f4;
+            --logo-blue: #7EDCFF; /* Updated to blueprint's recommended highlight: #7EDCFF */
             --pure-white: #ffffff;
             --nav-gray: #111111;
+            --supporting-text: #D9D9D9; /* Added from blueprint */
         }
 
         * {
@@ -29,7 +30,6 @@
         /* Responsive Navigation */
         nav {
             background-color: var(--nav-gray);
-            /* Reduced from 6% to 2% to move logo more toward the left corner */
             padding: 0 2% 0 3%; 
             display: flex;
             justify-content: space-between;
@@ -38,7 +38,6 @@
             top: 0;
             z-index: 1000;
             border-bottom: 1px solid #222;
-            /* Increased height to accommodate the rocket ship */
             height: 100px; 
         }
 
@@ -50,12 +49,9 @@
         }
 
         .brand img {
-            /* Scaled up significantly */
             height: 160px; 
             width: auto;
             object-fit: contain;
-            /* Negative margin-top pulls the text up, 
-               but translateY(10px) ensures the rocket tip isn't cut off by the top of the screen */
             transform: translateY(12px);
             transition: transform 0.3s ease;
         }
@@ -88,6 +84,13 @@
             font-weight: 700 !important;
             text-transform: uppercase;
             font-size: 0.85rem;
+            text-decoration: none;
+            display: inline-block;
+            transition: opacity 0.3s;
+        }
+
+        .cta-btn:hover {
+            opacity: 0.9;
         }
 
         /* Mobile Adjustments */
@@ -101,7 +104,7 @@
 
             .brand img {
                 height: 100px;
-                transform: translateY(0); /* Reset shift for mobile centering */
+                transform: translateY(0); 
                 margin-top: 0;
             }
 
@@ -132,46 +135,10 @@
             margin-bottom: 20px;
         }
 
-        footer {
-            text-align: center;
-            padding: 40px 0;
-            color: #555;
-            font-size: 0.85rem;
-        }
-    </style>
-</head>
-<body>
-
-    <nav>
-        <a href="/" class="brand">
-            <img src="NU Logo Final.png" alt="NextUp Logo">
-        </a>
-        <ul class="nav-links">
-            <li><a href="/">Home</a></li>
-            <li><a href="#blog">Blog</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="https://linkedin.com/company/nextuppakistan" target="_blank">LinkedIn</a></li>
-            <li><a href="#newsletter" class="cta-btn">Newsletter</a></li>
-        </ul>
-    </nav>
-
-    <div class="main-content">
-        <header>
-            <h1>NextUp Insights</h1>
-            <p>Elevating the standard of professional excellence in Pakistan.</p>
-        </header>
-
-        <section id="blog">
-            <article class="blog-post">
-                <h2>The Journey Begins</h2>
-                <p>Welcome to our new home on the web. This space is designed to be clean, fast, and focused on the content that matters to you.</p>
-            </article>
-        </section>
-    </div>
-
-    <footer>
-        <p>&copy; 2026 NextUp Pakistan. Empowering Progress.</p>
-    </footer>
-
-</body>
-</html>
+        /* Newsletter Specific Styles */
+        .newsletter-container {
+            margin-top: 80px;
+            padding: 60px 40px;
+            background: #0A0A0A;
+            border-radius: 16px;
+            border: 1px solid
