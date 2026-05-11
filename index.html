@@ -7,10 +7,10 @@
     <style>
         :root {
             --dark-bg: #000000;
-            --logo-blue: #7EDCFF; /* Exact Sky Blue from your Blueprint */
+            --logo-blue: #7EDCFF; /* Updated to blueprint's recommended highlight: #7EDCFF */
             --pure-white: #ffffff;
             --nav-gray: #111111;
-            --supporting-grey: #D9D9D9; /* Soft Grey from your Blueprint */
+            --supporting-text: #D9D9D9; /* Added from blueprint */
         }
 
         * {
@@ -79,20 +79,18 @@
         .cta-btn {
             background-color: var(--logo-blue);
             color: var(--dark-bg) !important;
-            padding: 12px 24px;
+            padding: 10px 20px;
             border-radius: 6px;
             font-weight: 700 !important;
             text-transform: uppercase;
             font-size: 0.85rem;
             text-decoration: none;
-            border: none;
-            cursor: pointer;
-            transition: transform 0.2s ease, opacity 0.3s;
+            display: inline-block;
+            transition: opacity 0.3s;
         }
 
         .cta-btn:hover {
             opacity: 0.9;
-            transform: translateY(-1px);
         }
 
         /* Mobile Adjustments */
@@ -115,6 +113,7 @@
                 flex-wrap: wrap;
                 justify-content: center;
                 padding-bottom: 10px;
+                padding-right: 0;
             }
         }
 
@@ -136,36 +135,26 @@
             margin-bottom: 20px;
         }
 
-        .blog-post {
-            margin-bottom: 40px;
-        }
-
-        .blog-post h2 {
-            margin-bottom: 15px;
-            font-size: 1.8rem;
-        }
-
-        /* Newsletter Section Styling */
-        .newsletter-section {
-            margin-top: 100px;
+        /* Newsletter Specific Styles */
+        .newsletter-container {
+            margin-top: 80px;
             padding: 60px 40px;
-            background: #0A0A0A; /* Slightly lighter black for depth */
+            background: #0A0A0A;
             border-radius: 16px;
             border: 1px solid #222;
             text-align: center;
         }
 
-        .newsletter-section h2 {
-            font-size: 2.5rem;
+        .newsletter-container h2 {
+            font-size: 2.2rem;
             margin-bottom: 15px;
-            font-weight: 800;
+            font-weight: 700;
         }
 
-        .newsletter-section p {
-            color: var(--supporting-grey);
+        .newsletter-container p {
+            color: var(--supporting-text);
             max-width: 550px;
-            margin: 0 auto 35px;
-            font-size: 1.1rem;
+            margin: 0 auto 30px;
         }
 
         .newsletter-form {
@@ -173,7 +162,7 @@
             gap: 12px;
             justify-content: center;
             flex-wrap: wrap;
-            max-width: 550px;
+            max-width: 500px;
             margin: 0 auto;
         }
 
@@ -194,18 +183,23 @@
             border-color: var(--logo-blue);
         }
 
-        .tagline-footer {
-            margin-top: 25px;
-            font-size: 0.7rem;
+        .newsletter-submit {
+            border: none;
+            cursor: pointer;
+            padding: 14px 28px;
+            border-radius: 8px;
+        }
+
+        .newsletter-footer {
+            margin-top: 20px;
+            font-size: 0.75rem;
             color: #555;
-            text-transform: uppercase;
-            letter-spacing: 1px;
         }
 
         footer {
             text-align: center;
-            padding: 80px 0 40px;
-            color: #555;
+            padding: 60px 0;
+            color: #444;
             font-size: 0.85rem;
         }
     </style>
@@ -238,33 +232,30 @@
             </article>
         </section>
 
-        <section id="newsletter" class="newsletter-section">
-            <h2>What's Up <span style="color: var(--logo-blue);">Next?</span></h2>
-            <p>
-                The weekly briefing on Al workflows, remote career opportunities, and growth roadmaps for Pakistan's next generation.
-            </p>
+        <section id="newsletter" class="newsletter-container">
+            <h2>Ready for <span style="color: var(--logo-blue);">what's next?</span></h2>
+            <p>Join our community of students and professionals. Get modern career guides, AI productivity systems, and remote job roadmaps delivered weekly.</p>
             
             <form action="https://formspree.io/f/hey@nextup.pk" method="POST" class="newsletter-form">
                 <input 
                     type="email" 
                     name="email" 
                     class="newsletter-input" 
-                    placeholder="Enter your professional email" 
+                    placeholder="Enter your email address" 
                     required
                 >
-                <button type="submit" class="cta-btn">
+                <button type="submit" class="cta-btn newsletter-submit">
                     See What's Next
                 </button>
             </form>
-            
-            <div class="tagline-footer">
-                High-Signal Insights. No Spam. Unsubscribe at any time.
+            <div class="newsletter-footer">
+                Professional insights only. Unsubscribe at any time.
             </div>
         </section>
     </div>
 
     <footer>
-        <p>&copy; 2026 NextUp Pakistan. Empowering Progress.</p>
+        <p>&copy; 2026 NextUp Pakistan. Empowering Progress. [cite: 11]</p>
     </footer>
 
 </body>
